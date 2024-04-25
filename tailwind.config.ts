@@ -20,8 +20,8 @@ const config: Config = {
       bermuda: '#78dcca',
     },
     screens: {
-      mob: { 'max': '428px' },
-      tab: { 'min': '429px', 'max': '1024px' },
+      mob: { 'max': '435px' },
+      tab: { 'min': '436px', 'max': '1024px' },
       dt: { 'min': '1025px', 'max': '1440px' },
       fw: '1441px',
     },
