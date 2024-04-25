@@ -10,10 +10,22 @@ const config: Config = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
+      black: '#000000',
       white: '#ffffff',
       purple: '#3f3cbb',
       midnight: '#121063',
-      metal: '#565584',
+      // metal: '#565584',
+      metal: {
+        100: "#dddde6",
+        200: "#bbbbce",
+        300: "#9a99b5",
+        400: "#78779d",
+        500: "#565584",
+        600: "#45446a",
+        700: "#34334f",
+        800: "#222235",
+        900: "#11111a"
+},
       tahiti: '#3ab7bf',
       silver: '#ecebff',
       bubblegum: '#ff77e9',
@@ -26,6 +38,12 @@ const config: Config = {
       fw: '1441px',
     },
     extend: {
+      width: {
+        95: '95%'
+      },
+      height: {
+        95: '95%'
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
