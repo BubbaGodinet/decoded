@@ -1,9 +1,13 @@
 'use client';
 
-import React from 'react';
+import React, { ReactNode } from 'react';
 import tw from 'twin.macro';
 
-export default function PageWindow({children}) {
+interface pageWindowProps {
+  children: ReactNode;
+}
+
+export default function PageWindow({children}: pageWindowProps) {
 return (
 <Wrapper>
   <InnerWindow className='pageInnerWindow'>

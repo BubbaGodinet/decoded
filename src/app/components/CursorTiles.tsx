@@ -6,8 +6,13 @@ import sakuna1 from "@/app/images/jjk3.jpeg"
 import sakuna2 from '@/app/images/jjk3.jpeg'
 import luffy from '@/app/images/jjk3.jpeg'
 import goku from '@/app/images/jjk3.jpeg'
+import Image, { StaticImageData } from 'next/image';
 
-const Cursor = () => {
+interface cursorProps {
+  bgimg: StaticImageData
+}
+
+export default function Cursor() {
 
     gsap.set(".cursorBox", {
       xPercent: -50,
@@ -48,8 +53,8 @@ const Cursor = () => {
   )
 }
 
-const CursorWrapper = styled.div`
-background-image: ${props => `url(${props.bgimg})`};
+const CursorWrapper = styled.div<cursorProps>`
+background-image: ${props => `url(${props.bgimg.src})`};
 background-size:cover;
 background-repeat: no-repeat;
   position: fixed;
@@ -74,4 +79,3 @@ const Wrapper = styled.div`
   overflow: hidden;
   z-index: 0;
 `
-export default Cursor
