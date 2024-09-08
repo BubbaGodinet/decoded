@@ -19,20 +19,12 @@
     "npm": "^10.8.1",
     "react": "^18",
     "react-dom": "^18",
-<<<<<<< HEAD
     "styled-components": "^6.1.13",
     "three": "^0.164.1"
   },
   "devDependencies": {
     "@babel/plugin-syntax-typescript": "^7.25.4",
     "@types/node": "^20.16.5",
-=======
-    "styled-components": "^6.1.11"
-  },
-  "devDependencies": {
-    "@babel/plugin-syntax-typescript": "^7.24.7",
-    "@types/node": "^20",
->>>>>>> 96e878fc6ff75ff6d802d4f86126e6f352c579b5
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "babel-loader": "^9.1.3",
