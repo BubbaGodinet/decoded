@@ -2,7 +2,7 @@
 
 import tw from 'twin.macro';
 import styled from 'styled-components';
-import gsap from 'gsap'
+// import gsap from 'gsap'
 import '@styles/fonts/typography.css';
 import CornerSVG from '@images/cornersvg.svg';
 import BlobHero from './BlobHero';
