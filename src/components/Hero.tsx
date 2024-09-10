@@ -5,12 +5,13 @@ import styled from 'styled-components';
 import gsap from 'gsap'
 import '@styles/fonts/typography.css';
 import CornerSVG from '@images/cornersvg.svg';
+import BlobHero from './BlobHero';
 
 export default function Hero() {
 
   return (
     <Wrapper>
-      <Gradient>
+      <BlobBox>
       <Nav>
         <NavOption>Projects</NavOption>
         <NavOption>About</NavOption>
@@ -19,18 +20,40 @@ export default function Hero() {
       <TRCornerSVG />
       <TLCornerSVG />
       <BLCornerSVG/>
+      <BRCornerSVG/>
       <NameBox>
         Bubba Godinet
       </NameBox>
-      </Gradient>
+        <Blob/>
+        <LogoBlock/>
+      </BlobBox>
     </Wrapper>
   );
 }
 
+const LogoBlock = tw.div`
+  absolute
+  bottom-0
+  w-full
+  h-14
+  bg-bgMain
+`
+const Blob = tw(BlobHero)`
+  absolute
+`
+const BRCornerSVG = tw(CornerSVG)`
+absolute
+bottom-[3.1rem]
+right-[-0.1rem]
+ w-12
+ h-16
+//  border-2 border-bubblegum
+ rotate-180
+`
 const BLCornerSVG = tw(CornerSVG)`
 absolute
-bottom-[1.9rem]
-left-[9.7rem]
+bottom-[2.9rem]
+left-[8.6rem]
  w-12
  h-16
 //  border-2 border-bubblegum
@@ -39,8 +62,8 @@ left-[9.7rem]
 const TLCornerSVG = tw(CornerSVG)`
 absolute
 z-10
-top-[9.2rem]
-left-[9.4rem]
+top-[6.6rem]
+left-[6.9rem]
  w-12
  h-16
 //  border-2 border-bubblegum
@@ -49,7 +72,7 @@ left-[9.4rem]
 const TRCornerSVG = tw(CornerSVG)`
 absolute
 z-10
-left-[14.3rem]
+left-[11.6rem]
  w-14
  h-16
 //  border-2 border-bubblegum
@@ -69,13 +92,15 @@ items-center
 // border-2
 // border-bubblegum
 `
-const Gradient = tw.div`
+const BlobBox = tw.div`
+relative
   flex
   z-0
   bg-bermuda
   h-full
-  w-3/6
+  w-3/5
   rounded-[2.5rem]
+  overflow-hidden
 `
 
 const NavOption = tw.a`
@@ -86,9 +111,8 @@ const NavOption = tw.a`
   font-humane
   text-silver
   text-[2rem]
-  h-[20rem]   /* Set a height for each item */
+  h-[14rem]   /* Set a height for each item */
   w-full 
-
   hover:text-hoverPurple
   // border-2 border-bermuda
 `;
@@ -103,7 +127,7 @@ const Nav = tw.div`
   w-1/6
   // border-2
   // border-bubblegum
-  pt-28
+  pt-40
   writing-mode-vertical-rl
   text-orientation-upright
 `;
@@ -112,5 +136,6 @@ relative
   bg-bgMain
   h-screen
   w-screen
-  p-10
+  pt-10
+  px-10
 `;
