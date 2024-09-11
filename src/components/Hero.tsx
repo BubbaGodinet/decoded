@@ -3,10 +3,14 @@
 import tw from 'twin.macro';
 // import gsap from 'gsap'
 import '@styles/fonts/typography.css';
+import Image from 'next/image';
 import CornerSVG from '@images/cornersvg.svg';
 import BlobHero from './BlobHero';
-import PlaceHolder from '@images/profilePlaceholder.webp'
-import Image from 'next/image';
+import PlaceHolder from '@images/profilePlaceholder.jpg'
+import GithubSVG from '@images/github.svg';
+import LinkedInSVG from '@images/linkedin.svg';
+import ResumeSVG from '@images/resume.svg';
+import TechCarousel from './TechCarousel';
 
 export default function Hero() {
 
@@ -30,24 +34,45 @@ export default function Hero() {
       </BlobBox>
       <ProfileContainer>
         <ProfilePic src={PlaceHolder} alt='profile pic of Bubba'/>
+        <Socials>
+          <Github/>
+          <LinkedIn/>
+          <Resume/>
+        </Socials>
+        <TechCarousel/>
       </ProfileContainer>
     </Wrapper>
   );
 }
-
+const Resume = tw(ResumeSVG)`
+  w-[4.688rem]
+  cursor-pointer
+`
+const LinkedIn = tw(LinkedInSVG)`
+  w-[4.688rem]
+  cursor-pointer
+`
+const Github = tw(GithubSVG)`
+  w-[4.7rem]
+  cursor-pointer
+`
 const Socials = tw.div`
-
+  flex
+  flex-row
+  items-center
+  gap-14
 `
 const ProfilePic = tw(Image)`
   rounded-30
-  h-[38rem]
+  h-[30rem]
+  w-[20rem]
 `
 
 const ProfileContainer = tw.div`
   flex 
   flex-col
-  gap-6
-  w-[30.75rem]
+  gap-14
+  w-[20rem]
   h-full
 `
 const LogoBlock = tw.div`
@@ -118,7 +143,6 @@ const BlobBox = tw.div`
 relative
   flex
   z-0
-  bg-bermuda
   h-full
   w-[60.75rem]
   rounded-[2.5rem]
