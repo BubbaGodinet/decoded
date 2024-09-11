@@ -1,9 +1,7 @@
 'use client';
 
 import tw from 'twin.macro';
-import gsap from 'gsap'
 import '@styles/fonts/typography.css';
-// import cornersvg from '@images/cornersvg.svg';
 import Hero from '../components/Hero'
 import About from '../components/About'
 
@@ -19,4 +17,6 @@ export default function Home() {
 
 const Wrapper = tw.div`
   bg-bgMain
+  max-w-full
+  overflow-hidden
 `;

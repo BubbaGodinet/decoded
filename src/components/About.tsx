@@ -11,14 +11,11 @@ export default function Hero() {
 
   return (
     <Wrapper>
-      <GradientImage src={Gradient} alt='purple gradient'/>
+     
     </Wrapper>
   );
 }
 
-const GradientImage = tw(Image)`
-
-`
 const Wrapper = tw.div`
 relative
   bg-bgMain

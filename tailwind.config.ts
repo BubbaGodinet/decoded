@@ -29,7 +29,7 @@ const config: Config = {
       silver: '#ecebff',
       bubblegum: '#ff77e9',
       bermuda: '#78dcca',
-      bgMain: '#110F15',
+      bgMain: '#09080B',
       hoverPurple: '#4e2cac',
     },
     screens: {
